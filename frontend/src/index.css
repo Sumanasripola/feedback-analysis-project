@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure html and body take full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+  font-family: 'Inter', sans-serif; /* Ensure Inter font is used */
+  background-color: #f3f4f6; /* Light gray background */
+  /* Removed min-height, display, flex-direction, align-items from body */
+  /* These will be handled by #root or App.jsx for better control */
+}
+
+#root {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align to top, allowing content to flow down */
+  min-height: 100vh; /* Ensure it takes at least full viewport height */
+  padding: 1rem; /* Add some padding around the main content */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+  width: 100%; /* Ensure #root takes full width */
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a0a0a0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* Base styles for the main application container */
+.container {
+  width: 100%; /* Ensure it takes full width of its parent */
+  /* max-width will be controlled by Tailwind in App.jsx */
+  background-color: #ffffff; /* White background for the main card */
+  border-radius: 12px; /* Rounded corners for the entire container */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  overflow: hidden; /* Ensures rounded corners clip content */
+  margin-top: 2rem; /* Add some top margin to push it down from the very top */
+  margin-bottom: 2rem; /* Add some bottom margin */
+}
+
+/* Header specific styles */
+.header {
+  background: linear-gradient(to right, #1e40af, #1d4ed8); /* Dark blue gradient */
+  color: #ffffff;
+  padding: 2.5rem 1.5rem; /* Increased padding for more space */
+  text-align: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Navigation button base styles - these are more general, specific colors/sizes in App.jsx */
+.nav-button {
+  transition: all 0.3s ease;
+  border: none; /* Explicitly remove border */
+  cursor: pointer;
+  outline: none;
+  font-weight: 700; /* Made font bolder */
+}
+
+/* Content section padding */
+.content-section {
+  padding: 2rem; /* Consistent padding for content area */
+}
+
+/* Card styling for internal content sections */
+.card {
+  background-color: #f9fafb; /* Light gray background for cards */
+  border-radius: 8px;
+  padding: 1.5rem; /* Added default padding to the card */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+/* Input field styling */
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #374151;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+  outline: none; /* Remove default outline */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.input-field:focus {
+  border-color: #3b82f6; /* Blue border on focus */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Blue glow on focus */
+}
+
+/* Primary button styling */
+.btn-primary {
+  background-color: #2563eb; /* Blue */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none; /* Ensure no default border */
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #1d4ed8; /* Darker blue on hover */
+  transform: translateY(-1px); /* Slight lift on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+.btn-primary:active {
+  transform: translateY(0); /* Press effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Result box styling */
+.result-box {
+  background-color: #eff6ff; /* Light blue */
+  border: 1px solid #bfdbfe; /* Lighter blue border */
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Result label styling */
+.result-label {
+  font-weight: 600;
+  color: #1f2937; /* Dark gray */
+}
+
+/* Result value styling */
+.result-value {
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+/* Custom text colors (matching Tailwind defaults for consistency) */
+.text-green { color: #10b981; } /* Tailwind green-500 */
+.text-red { color: #ef4444; }   /* Tailwind red-500 */
+.text-yellow { color: #f59e0b; } /* Tailwind yellow-500 */
+.text-blue-custom { color: #3b82f6; } /* Tailwind blue-500, renamed to avoid conflict */
+

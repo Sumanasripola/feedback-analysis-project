@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.hypothesis/
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+.mypy_cache/
+.vscode/ # VS Code specific files
+
+# Machine Learning
+models/ # Do NOT commit trained models, they can be large and are regenerated
+data/feedback_data.csv # Do NOT commit large datasets, especially if they grow dynamically
+
+# Flask specific
+instance/
+.flaskenv
+
+# Frontend (if using Node.js)
+node_modules/
+dist/
+build/
+.env
+.DS_Store # macOS specific
+
+# IDE specific
+.idea/ # PyCharm/IntelliJ
+*.iml
