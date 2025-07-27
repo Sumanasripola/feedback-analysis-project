@@ -1,6 +1,6 @@
-# Feedback Authenticity & Sentiment Analysis Backend
+# Feedback Authenticity & Sentiment Analysis
 
-An AI-powered Flask backend system designed to classify textual feedback for authenticity (genuine vs. false) and sentiment (positive, negative, neutral). This project provides a robust API for real-time analysis, batch processing, model retraining, and generating insightful analytics reports.
+An AI-powered Flask system designed to classify textual feedback for authenticity (genuine vs. false) and sentiment (positive, negative, neutral). This project provides a robust API for real-time analysis, batch processing, model retraining, and generating insightful analytics reports.
 
 ## Project Description
 
