@@ -24,9 +24,7 @@ Whether you're looking to enhance customer service, protect brand reputation, or
 -   [Usage](#usage)
 -   [API Endpoints](#api-endpoints)
 -   [Data Format](#data-format)
--   [Contributing](#contributing)
--   [License](#license)
-
+  
 ## Features
 
 * **Real-time Prediction**: Analyze individual feedback texts for authenticity and sentiment instantly.
